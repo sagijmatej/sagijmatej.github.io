@@ -1,0 +1,241 @@
+@font-face {
+  font-family: texgyreheros;
+  src: url(fonts/texgyreheros-regular.otf);
+}
+
+@font-face {
+  font-family: inter;
+  src: url(fonts/inter.ttf);
+}
+
+@font-face {
+  font-family: nunitosans;
+  src: url(fonts/NunitoSans-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: futura;
+  src: url(fonts/futura.ttf);
+}
+
+/*Full screen*/
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.slide-1-text {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: "inter";
+  letter-spacing: 2px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin: 10px 10px;
+  font-size: xx-large;
+  white-space: nowrap;
+}
+
+.slide-2-text {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: "inter";
+  letter-spacing: 2px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  margin: 10px 10px;
+  font-size: xx-large;
+  white-space: nowrap;
+}
+
+.slide-3-text {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: "inter";
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  margin: 10px 10px;
+  font-size: xx-large;
+  white-space: nowrap;
+}
+
+.slide-4-text {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: "inter";
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  margin: 10px 10px;
+  font-size: xx-large;
+  white-space: nowrap;
+}
+
+.splide {
+  height: 100vh;
+}
+
+.splide .splide__arrow {
+  background-color: transparent;
+}
+
+.inner-slide-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+}
+
+.inner-slide-container div {
+  position: relative;
+}
+
+.inner-slide-container img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.inner-item-left-big {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.inner-item-right-small {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 2;
+}
+
+.inner-item-center {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.inner-item-right-big {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.inner-item-left-small {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 2;
+}
+
+.inner-item-left-large {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.inner-item-text-top-right {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.inner-item-text-top-left {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.inner-item-text-bottom-right {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* Default until here: Large devices such as laptops, computers (greater than 1024px) **/
+
+@media only screen and (max-width: 1550px) {
+  .inner-item-left-large {
+    grid-column-end: 4;
+  }
+}
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+  .inner-item-left-small {
+    display: none;
+  }
+  .inner-item-right-small {
+    display: none;
+  }
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+
+  .first-page-photo{
+    -webkit-mask-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,0.19931722689075626) 95%, rgba(255,255,255,0.19931722689075626) 100%);
+    mask-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,255,0.19931722689075626) 95%, rgba(255,255,255,0.19931722689075626) 100%);
+  }
+
+  .inner-item-left-big {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .inner-item-right-big {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .inner-item-left-large{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .inner-item-text-bottom-right{
+    grid-row-start: 1;
+  }
+
+  .slide-1-text {
+    position: sticky;
+    top: 0;
+    right: 0;
+  }
+  .slide-2-text {
+    position: sticky;
+    top: 0;
+    right: 0;
+  }
+  .slide-3-text {
+    position: sticky;
+    top: 0;
+    right: 0;
+  }
+  .slide-4-text {
+    position: sticky;
+    top: 0;
+    right: 0;
+  }
+}
