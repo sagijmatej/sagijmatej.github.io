@@ -1,21 +1,6 @@
 @font-face {
-  font-family: texgyreheros;
-  src: url(fonts/texgyreheros-regular.otf);
-}
-
-@font-face {
   font-family: inter;
   src: url(fonts/inter.ttf);
-}
-
-@font-face {
-  font-family: nunitosans;
-  src: url(fonts/NunitoSans-VariableFont.ttf);
-}
-
-@font-face {
-  font-family: futura;
-  src: url(fonts/futura.ttf);
 }
 
 /*Full screen*/
@@ -83,6 +68,17 @@ body {
 
 .splide .splide__arrow {
   background-color: transparent;
+}
+
+/* Change the frame size */
+.splide .splide__arrow {
+  width: 50px;
+  height: 50px;
+}
+/* Change the arrows size */
+.splide .splide__arrow svg {
+  width: 70%;
+  height: 70%;
 }
 
 .inner-slide-container {
@@ -226,24 +222,38 @@ body {
     grid-row-start: 1;
   }
 
+  .inner-item-text-bottom-right{
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+  
+  .inner-item-text-top-left{
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+  .inner-item-text-top-right{
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
   .slide-1-text {
     position: sticky;
-    top: 0;
+    top: 5px;
     right: 0;
   }
   .slide-2-text {
     position: sticky;
-    top: 0;
+    top: 5px;
     right: 0;
   }
   .slide-3-text {
     position: sticky;
-    top: 0;
+    top: 5px;
     right: 0;
   }
   .slide-4-text {
     position: sticky;
-    top: 0;
+    top: 5px;
     right: 0;
   }
 }
