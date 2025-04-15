@@ -1,0 +1,19 @@
+{
+  "name": "f3-arhitektura",
+  "version": "1.0.0",
+  "description": "website for arcitehtural office f3 arhitektura",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagijmatej/f3-arhitektura.git"
+  },
+  "author": "Matej Sagij",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagijmatej/f3-arhitektura/issues"
+  },
+  "homepage": "https://github.com/sagijmatej/f3-arhitektura#readme"
+}
