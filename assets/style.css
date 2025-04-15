@@ -1,3 +1,7 @@
+:root{
+  --text-color: #4A4947;
+}
+
 @font-face {
   font-family: inter;
   src: url(fonts/inter.ttf);
@@ -8,10 +12,13 @@ html,
 body {
   margin: 0;
   height: 100%;
+  font-family: inter;
+  letter-spacing: 1px;
+  font-size: medium;
 }
 
-.slide-1-text {
-  color: inherit;
+.slide-text {
+  color: var(--text-color);
   text-decoration: inherit;
   font-family: "inter";
   letter-spacing: 2px;
@@ -22,46 +29,10 @@ body {
   font-size: xx-large;
   white-space: nowrap;
 }
-
-.slide-2-text {
-  color: inherit;
-  text-decoration: inherit;
-  font-family: "inter";
-  letter-spacing: 2px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  margin: 10px 10px;
-  font-size: xx-large;
-  white-space: nowrap;
+.slide-2-text{
+  color: #fff;
+  mix-blend-mode: difference;
 }
-
-.slide-3-text {
-  color: inherit;
-  text-decoration: inherit;
-  font-family: "inter";
-  letter-spacing: 2px;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  margin: 10px 10px;
-  font-size: xx-large;
-  white-space: nowrap;
-}
-
-.slide-4-text {
-  color: inherit;
-  text-decoration: inherit;
-  font-family: "inter";
-  letter-spacing: 2px;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  margin: 10px 10px;
-  font-size: xx-large;
-  white-space: nowrap;
-}
-
 .splide {
   height: 100vh;
 }
@@ -77,14 +48,14 @@ body {
 }
 /* Change the arrows size */
 .splide .splide__arrow svg {
-  width: 70%;
-  height: 70%;
+  width: 50%;
+  height: 50%;
 }
 
 .inner-slide-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 100vh;
@@ -100,85 +71,108 @@ body {
   height: 100%;
 }
 
-.inner-item-left-big {
+.inner-item-1-big {
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 8;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 9;
 }
 
-.inner-item-right-small {
-  grid-column-start: 5;
-  grid-column-end: 6;
+.inner-item-1-small {
+  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 4;
+  grid-row-end: 9;
+}
+
+.inner-item-2-big {
+  grid-column-start: 4;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 9;
+}
+
+.inner-item-2-small {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.inner-item-3-big {
+  grid-column-start: 1;
+  grid-column-end: 11;
   grid-row-start: 3;
-  grid-row-end: 2;
+  grid-row-end: 9;
 }
 
-.inner-item-center {
-  grid-column-start: 2;
-  grid-column-end: 5;
+.inner-item-text {
+  grid-column-start: 9;
+  grid-column-end: 11;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
-.inner-item-right-big {
-  grid-column-start: 3;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 3;
+.about-text{
+  padding-top: 20px;
+  width: 50%;
+  margin: auto;
+}
+.about-text-inner{
+  padding-top: 120px;
 }
 
-.inner-item-left-small {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 2;
+p{
+  margin: 0;
 }
 
-.inner-item-left-large {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 3;
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
-.inner-item-text-top-right {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 2;
+a {
+  text-decoration: none; 
+  color: var(--text-color); 
 }
 
-.inner-item-text-top-left {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
+.link-studio-1{
+  color:#000;
+}
+.link-studio-2{
+  color:#000;
+}
+.link-ig{
+  color: #000;
+}
+.link-email{
+  color: #000;
 }
 
-.inner-item-text-bottom-right {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
+
 
 /* Default until here: Large devices such as laptops, computers (greater than 1024px) **/
 
-@media only screen and (max-width: 1550px) {
-  .inner-item-left-large {
-    grid-column-end: 4;
-  }
-}
-
 /* Medium devices such as tablets (1024px or lesser) */
 @media only screen and (max-width: 1024px) {
-  .inner-item-left-small {
+
+  .inner-item-1-small {
     display: none;
   }
-  .inner-item-right-small {
+  .inner-item-1-big{
+    grid-column-end: 7;
+  }
+  .inner-item-2-big{
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+
+
+  .inner-item-2-small {
     display: none;
   }
+
 }
 
 /* Small devices such as phones (768px or lesser) */
@@ -197,63 +191,130 @@ body {
   }
 
 
-  .inner-item-left-big {
+  .inner-item-1-big {
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 11;
     grid-row-start: 1;
-    grid-row-end: 3;
-  }
-
-  .inner-item-right-big {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-
-  .inner-item-left-large{
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-
-  .inner-item-text-bottom-right{
-    grid-row-start: 1;
-  }
-
-  .inner-item-text-bottom-right{
-    grid-row-start: 1;
-    grid-column-start: 1;
+    grid-row-end: 9;
   }
   
-  .inner-item-text-top-left{
-    grid-row-start: 1;
+  .inner-item-2-big {
     grid-column-start: 1;
-  }
-  .inner-item-text-top-right{
+    grid-column-end: 11;
     grid-row-start: 1;
-    grid-column-start: 1;
+    grid-row-end: 9;
   }
 
-  .slide-1-text {
+  .inner-item-3-big {
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 9;
+  }
+
+  .inner-item-text{
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .slide-text {
     position: sticky;
     top: 5px;
     right: 0;
   }
-  .slide-2-text {
-    position: sticky;
-    top: 5px;
-    right: 0;
+}
+
+
+
+/* 
+  ABOUT PAGE
+*/
+
+.brand-text-main {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: "inter";
+  letter-spacing: 2px;
+  margin: 10px 10px;
+  font-size: x-large;
+  white-space: nowrap;
+}
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+
+  .about-text{
+    width: 75%;
   }
-  .slide-3-text {
-    position: sticky;
-    top: 5px;
-    right: 0;
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+
+  .about-text{
+    width: 90%;
   }
-  .slide-4-text {
-    position: sticky;
-    top: 5px;
-    right: 0;
+}
+
+
+/*Portfolio css ---------------------*/
+
+
+.portfolio-text{
+  margin:auto;
+  text-align: center;
+  width: 60%;
+  margin-bottom: 32px;
+}
+
+.portfolio-buttons{
+  display: flow-root;
+  margin-top: 10px;
+}
+.portfolio-line {
+  margin-top: 4px;
+  margin-bottom: 32px;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+.project-photo{
+  width: 33%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {
+
+  .project-photo {
+    width: 49%;
+    height: 300px;
+  }
+  .portfolio-text{
+    margin-top: 16px;
+    width: 80%;
+  }
+}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+
+
+
+  .portfolio-line{
+    visibility: hidden;
+    margin-bottom: 16px;
+  }
+  .project-photo {
+    width: 100%;
+    height: 200px;
+  }
+  .portfolio-text{
+    width: 90%;
   }
 }
