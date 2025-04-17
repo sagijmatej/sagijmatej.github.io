@@ -362,6 +362,32 @@ body {
   margin-left: 10px;
 }
 
+.link-work:hover{
+  color: #4a4947;
+}
+.link-about:hover{
+  color: #4a4947;
+}
+.link-contact:hover{
+  color: #4a4947;
+}
+.link-ig:hover{
+  color: #4a4947;
+}
+.link-fb:hover{
+  color: #4a4947;
+}
+.link-email:hover{
+  color: #4a4947;
+}
+.link-studio-1:hover{
+  color: #4a4947;
+}
+.link-studio-2:hover{
+  color: #4a4947;
+}
+
+
 .about-text {
   width: 70%;
   margin-left: 0;
@@ -469,7 +495,7 @@ p {
 }
 
 .options {
-  margin-right: 2em;
+  margin-right: 1.5em;
 }
 
 .project-photo {
@@ -519,18 +545,51 @@ p {
   color: #000;
 }
 
+.option-0 {
+  display: none;
+}
+
 /* Medium devices such as tablets (1024px or lesser) */
 @media only screen and (max-width: 1024px) {
+
+  .portfolio-body{
+    margin-top: 1em;
+  }
+
+  .portfolio-column-buttons {
+    margin-top: 10px;
+    width: 49%;
+    display: inline-block;
+    padding-left: 2px;
+  }
+
+  .portfolio-column-button-one{
+    width: 99%;
+  }
+
   .portfolio {
     grid-template-columns: 49.9% 49.9%;
   }
+  
+  .option-0 {
+    display: none;
+  }
+
 }
 
 /* Small devices such as phones (768px or lesser) */
 @media only screen and (max-width: 768px) {
 
+  .portfolio-body{
+    margin-top: 0;
+  }
+
   .portfolio {
     grid-template-columns: 99.9%;
+  }
+
+  .portfolio-column-buttons {
+    width: 99%;
   }
 
   .project-wrapper {
@@ -539,11 +598,21 @@ p {
     margin-bottom: 2em;
   }
 
-
   .project-info{
     display: inline;
     text-align: left;
-    top: -0.5em;
+    top: -0.65em;
+  }
+
+  .portfolio-column-button-one{
+    margin-bottom: 1em;
+  }
+  .portfolio-column-button-two{
+    display: none;
+  }
+
+  .option-0{
+    display: inline;
   }
 
 }

@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
   splide.mount();
 });
 
+//If mobile
+/*
+document.addEventListener('DOMContentLoaded', function () {
+  if ($(window).width() > 768) {
+    $(this).find(".option-0").css("display", "none");
+   }
+});
+*/
 
 
 //Work page
@@ -26,7 +34,9 @@ $(".project-wrapper").hover(
     $(this).find(".project-info").show()
   },
   function () {
-    $(this).find(".project-info").hide()
+    if ($(window).width() > 768) {
+    $(this).find(".project-info").hide();
+   }
   },
 );
 
@@ -89,3 +99,4 @@ $(".option-4").click(
       .css("display", "none");
   }
 );
+
