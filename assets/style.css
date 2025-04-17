@@ -134,9 +134,12 @@ body {
 }
 
 .prevent-select {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 a {
@@ -343,14 +346,13 @@ p {
   display: none;
 }
 
-.link-brand-2{
+.link-brand-2 {
   display: none;
   color: #000;
 }
 
 /* Medium devices such as tablets (1024px or lesser) */
 @media only screen and (max-width: 1024px) {
-
   .about-text {
     width: 80%;
   }
@@ -361,22 +363,21 @@ p {
 
 /* Small devices such as phones (768px or lesser) */
 @media only screen and (max-width: 768px) {
-
   .div-left-breaks {
     display: none;
   }
 
-  .about-links{
+  .about-links {
     text-align: right;
   }
-  .link-brand-2{
+  .link-brand-2 {
     display: block;
   }
 
   .div-left {
     display: none;
   }
-  .div-right{
+  .div-right {
     width: 100%;
     padding-left: 2em;
   }
@@ -406,8 +407,18 @@ p {
   margin-bottom: 32px;
 }
 
+.button-all {
+  cursor: pointer;
+}
+.button-f3 {
+  cursor: pointer;
+}
+.options {
+  cursor: pointer;
+  margin-right: 2em;
+}
+
 .portfolio-column-buttons {
-  display: flow-root;
   margin-top: 10px;
   width: 33%;
   display: inline-block;
@@ -426,7 +437,7 @@ p {
 }
 
 .options {
-  padding-right: 2em;
+  margin-right: 2em;
 }
 
 .project-photo {
@@ -435,15 +446,51 @@ p {
   object-fit: cover;
 }
 
+.portfolio {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.project-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 500px;
+}
+
+.project-photo {
+  margin: 0;
+  padding: 0;
+  width: 99%;
+  height: 99%;
+  display: block;
+}
+
+.project-photo-mask {
+  width: 99%;
+  height: 99%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background:rgba(255,255,255,0.7);
+}
+
+.project-info {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  color: #000;
+}
+
 /* Medium devices such as tablets (1024px or lesser) */
 @media only screen and (max-width: 1024px) {
-  .project-photo {
-    width: 49%;
-    height: 300px;
-  }
-  .portfolio-text {
-    margin-top: 16px;
-    width: 80%;
+  .portfolio {
+    grid-template-columns: 49.9% 49.9%;
   }
 }
 
