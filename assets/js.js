@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     type: 'fade',
     rewind: true,
     pagination: false,
+    autoplay: true,
+    interval: 9000,
+    pauseOnHover: false,
+    pauseOnFocus: false,
   });
 
   splide.mount();
 });
-
 
 
 
@@ -46,13 +49,13 @@ $(".option-1").click(
 */
 
 $(".button-all").click(
-  function(){
+  function () {
     $(".project-wrapper").css("display", "block");
   }
 );
 
 $(".option-1").click(
-  function(){
+  function () {
     $(".filter-option-1")
       .css("display", "block");
     $(".project-wrapper").not(".filter-option-1")
@@ -61,7 +64,7 @@ $(".option-1").click(
 );
 
 $(".option-2").click(
-  function(){
+  function () {
     $(".filter-option-2")
       .css("display", "block");
     $(".project-wrapper").not(".filter-option-2")
@@ -70,7 +73,7 @@ $(".option-2").click(
 );
 
 $(".option-3").click(
-  function(){
+  function () {
     $(".filter-option-3")
       .css("display", "block");
     $(".project-wrapper").not(".filter-option-3")
@@ -79,7 +82,7 @@ $(".option-3").click(
 );
 
 $(".option-4").click(
-  function(){
+  function () {
     $(".filter-option-4")
       .css("display", "block");
     $(".project-wrapper").not(".filter-option-4")
