@@ -35,3 +35,54 @@ $(".project-wrapper").hover(
     $(this).find(".project-photo-mask").hide()
   },
 );
+
+/*
+$(".option-1").click(
+  function () {
+    $("project-wrapper").not(".filter-option-1")
+      .css("display", "none");
+  }
+);
+*/
+
+$(".button-all").click(
+  function(){
+    $(".project-wrapper").css("display", "block");
+  }
+);
+
+$(".option-1").click(
+  function(){
+    $(".filter-option-1")
+      .css("display", "block");
+    $(".project-wrapper").not(".filter-option-1")
+      .css("display", "none");
+  }
+);
+
+$(".option-2").click(
+  function(){
+    $(".filter-option-2")
+      .css("display", "block");
+    $(".project-wrapper").not(".filter-option-2")
+      .css("display", "none");
+  }
+);
+
+$(".option-3").click(
+  function(){
+    $(".filter-option-3")
+      .css("display", "block");
+    $(".project-wrapper").not(".filter-option-3")
+      .css("display", "none");
+  }
+);
+
+$(".option-4").click(
+  function(){
+    $(".filter-option-4")
+      .css("display", "block");
+    $(".project-wrapper").not(".filter-option-4")
+      .css("display", "none");
+  }
+);
