@@ -45,6 +45,7 @@ body {
 
 .slide-text:hover{
   color: #7c7b79;
+  cursor: pointer;
 }
 
 .splide-index {
