@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
   splide.mount();
 });
 
+$('.slide-text').click(function () {
+  window.location.href = 'contact/';
+});
+
 //If mobile
 /*
 document.addEventListener('DOMContentLoaded', function () {
@@ -26,8 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Work page
 $('.button-f3').click(function () {
-  window.location.href = 'about.html';
+  window.location.href = '../contact';
 });
+
+$('.button-f3-project').click(function () {
+  window.location.href = '../../contact';
+});
+
 
 $(".project-wrapper").hover(
   function () {
@@ -59,6 +68,12 @@ $(".option-1").click(
 */
 
 $(".button-all").click(
+  function () {
+    $(".project-wrapper").css("display", "block");
+  }
+);
+
+$(".option-0").click(
   function () {
     $(".project-wrapper").css("display", "block");
   }
@@ -100,3 +115,47 @@ $(".option-4").click(
   }
 );
 
+
+$('.project-wrapper').click(function () {
+  window.location.href = 'fv-01/';
+});
+
+
+
+/*---select project page*/
+
+var splideProject = new Splide("#main-slider", {
+  type:'fade',
+  rewind: true,
+  pagination: false,
+  cover: true,
+  heightRatio: 0.5
+});
+
+var thumbnails = document.getElementsByClassName("thumbnail");
+var current;
+
+for (var i = 0; i < thumbnails.length; i++) {
+  initThumbnail(thumbnails[i], i);
+}
+
+function initThumbnail(thumbnail, index) {
+  thumbnail.addEventListener("click", function () {
+    splideProject.go(index);
+  });
+}
+
+splideProject.on("mounted move", function () {
+  var thumbnail = thumbnails[splideProject.index];
+
+  if (thumbnail) {
+    if (current) {
+      current.classList.remove("is-active");
+    }
+
+    thumbnail.classList.add("is-active");
+    current = thumbnail;
+  }
+});
+
+splideProject.mount();

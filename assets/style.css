@@ -18,7 +18,6 @@ body {
   margin: 0;
   height: 100%;
   font-family: textgyreheros;
-  letter-spacing: 1px;
   font-size: medium;
 }
 
@@ -48,7 +47,7 @@ body {
   color: #7c7b79;
 }
 
-.splide {
+.splide-index {
   height: 100vh;
 }
 
@@ -58,8 +57,8 @@ body {
 
 /* Change the frame size */
 .splide .splide__arrow {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 /* Change the arrows size */
 .splide .splide__arrow svg {
@@ -286,7 +285,7 @@ a {
 }
 
 /* 
-  ABOUT PAGE
+  CONTACT PAGE
 */
 
 .brand-text-main {
@@ -318,10 +317,7 @@ a {
   width: 70%;
 }
 
-.link-contact {
-  color: #000;
-  margin-left: 10px;
-}
+
 
 .portfolio-body {
   margin-top: 2em;
@@ -331,6 +327,8 @@ a {
 body {
   height: calc(100% - 2em);
 }
+
+
 
 .link-brand-work {
   color: #000;
@@ -359,8 +357,14 @@ body {
 }
 .link-about {
   color: #000;
-  margin-left: 10px;
+  margin-left: 0.8em;
 }
+.link-contact {
+  color: #000;
+  margin-left: 0.8em;
+}
+
+
 
 .link-work:hover{
   color: #4a4947;
@@ -388,11 +392,11 @@ body {
 }
 
 
-.about-text {
+.contact-text {
   width: 70%;
   margin-left: 0;
 }
-.about-text-inner {
+.contact-text-inner {
   padding-top: 6em;
 }
 
@@ -411,7 +415,7 @@ p {
 
 /* Medium devices such as tablets (1024px or lesser) */
 @media only screen and (max-width: 1024px) {
-  .about-text {
+  .contact-text {
     width: 80%;
   }
   .div-left {
@@ -425,11 +429,8 @@ p {
     display: none;
   }
 
-  .about-links {
-    text-align: right;
-  }
   .link-brand-2 {
-    display: block;
+    display: none;
   }
 
   .div-left {
@@ -440,7 +441,7 @@ p {
     padding-left: 2em;
   }
 
-  .about-text {
+  .contact-text {
     margin-top: 2em;
     width: 90%;
   }
@@ -450,23 +451,27 @@ p {
   .social-links-2 {
     display: block;
   }
-  .about-text-inner {
+  .contact-text-inner {
     margin-top: 2em;
     padding-top: 0;
   }
 }
 
-/*Portfolio css ---------------------*/
+/*WORK PAGE CSS ---------------------*/
 
 .portfolio-text {
   margin: auto;
   text-align: center;
-  width: 100%;
+  width: 98%;
   margin-bottom: 32px;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .button-all {
   cursor: pointer;
+  padding-left: 0;
+  margin-left: 0;
 }
 .button-f3 {
   cursor: pointer;
@@ -477,10 +482,22 @@ p {
 }
 
 .portfolio-column-buttons {
-  margin-top: 10px;
-  width: 33%;
+  margin-top: 1em;
+  padding-left: 1%;
+  width: 32%;
   display: inline-block;
 }
+
+.portfolio-column-button-two{
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+.portfolio-column-button-three{
+  margin-left: 12px;
+}
+
 .portfolio-line {
   margin-top: 4px;
   margin-bottom: 32px;
@@ -491,7 +508,7 @@ p {
 }
 
 .portfolio-row-buttons {
-  width: 100%;
+  width: 99%;
 }
 
 .options {
@@ -507,42 +524,50 @@ p {
 .portfolio {
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 
 .project-wrapper {
   position: relative;
   display: inline-block;
   height: 500px;
+  margin: 0.5%
 }
 
 .project-photo {
   margin: 0;
   padding: 0;
-  width: 99%;
-  height: 99%;
+  width: 99.9%;
+  height: 99.9%;
   display: block;
 }
 
 .project-photo-mask {
-  width: 99%;
-  height: 99%;
+  width: 99.9%;
+  height: 99.9%;
   position: absolute;
   top: 0;
   left: 0;
   display: none;
   background:rgba(255,255,255,0.7);
+  cursor: pointer;
 }
 
 .project-info {
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
+  bottom: 0.5em;
+  left: 1em;
   transform: translate(0, -50%);
   text-align: center;
-  cursor: pointer;
   display: none;
   color: #000;
+  cursor: pointer;
+  font-size: xx-large;
+}
+
+.option-4{
+  margin-right: 0;
 }
 
 .option-0 {
@@ -586,10 +611,11 @@ p {
 
   .portfolio {
     grid-template-columns: 99.9%;
+    margin: 0;
   }
 
   .portfolio-column-buttons {
-    width: 99%;
+    width: 99.9%;
   }
 
   .project-wrapper {
@@ -601,7 +627,8 @@ p {
   .project-info{
     display: inline;
     text-align: left;
-    top: -0.65em;
+    bottom: -2em;
+    font-size: medium;
   }
 
   .portfolio-column-button-one{
@@ -615,4 +642,53 @@ p {
     display: inline;
   }
 
+  .project-photo{
+    display:block;
+    margin:auto;
+    width:97%
+  }
+
 }
+
+
+/* Selected project page
+-------------------------*/
+
+
+.project-splide-div{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.splide-project .splide__arrow {
+  display: none;
+} 
+
+.thumbnails {
+  display: flex;
+  margin: 2rem auto 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  list-style: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.thumbnail.is-active {
+  opacity: 1;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+
